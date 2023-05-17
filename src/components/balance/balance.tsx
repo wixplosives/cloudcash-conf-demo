@@ -13,10 +13,6 @@ export interface BalanceProps {
     className?: string;
 }
 
-/**
- * This component was generated using Codux's built-in Default new component template.
- * For details on on how to create custom new component templates, see https://help.codux.com/kb/en/article/configuration-for-balances-and-templates
- */
 export const Balance = ({
     finances: { balanceSum = 0, incomeSum = 0, outcomeSum = 0 },
     className,

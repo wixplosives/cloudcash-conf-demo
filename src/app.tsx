@@ -3,7 +3,7 @@ import { Goals } from './components/goals/goals';
 import { OutcomeStatistics } from './components/outcome-statistics/outcome-statistics';
 import { Section } from './components/section/section';
 import { TransactionHistory } from './components/transaction-history/transaction-history';
-import PageHeader from './components/page-header/page-header';
+import { PageHeader } from './components/page-header/page-header';
 import { NewTransaction } from './components/new-transaction/new-transaction';
 import { GetLoanBanner } from './components/get-loan-banner/get-loan-banner';
 import styles from './app.module.scss';
@@ -30,9 +30,9 @@ function App() {
                         <div className={styles.mainColumn}>
                             <Balance
                                 finances={{
-                                    balanceSum: 1425,
-                                    incomeSum: 627,
-                                    outcomeSum: 321,
+                                    balanceSum: 56263,
+                                    incomeSum: 3463,
+                                    outcomeSum: 734,
                                 }}
                             />
                         </div>

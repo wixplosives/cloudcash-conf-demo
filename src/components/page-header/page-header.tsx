@@ -14,7 +14,7 @@ interface PageHeaderProps extends PageHeaderSubcomponets {
     children: React.ReactNode;
 }
 
-const PageHeader = ({ className, children }: PageHeaderProps) => {
+export const PageHeader = ({ className, children }: PageHeaderProps) => {
     return (
         <header className={classNames(styles.root, className)}>
             <div>{children}</div>
@@ -53,5 +53,3 @@ PageHeader.Title = Title;
 
 const Subtitle = (props: PageSubtitleProps) => <PageSubtitle {...props} />;
 PageHeader.Subtitle = Subtitle;
-
-export default PageHeader;
