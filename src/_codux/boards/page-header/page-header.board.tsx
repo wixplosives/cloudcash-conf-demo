@@ -3,7 +3,7 @@ import PageHeader from '../../../components/page-header/page-header';
 import styles from './page-header.board.module.scss';
 
 export default createBoard({
-    name: '🧩 Page Header',
+    name: 'Page Header',
     Board: () => (
         <PageHeader>
             <div className={styles.root}>Page Header Content</div>

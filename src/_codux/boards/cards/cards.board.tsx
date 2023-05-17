@@ -2,9 +2,10 @@ import { createBoard } from '@wixc3/react-board';
 import { Cards } from '../../../components/cards/cards';
 
 export default createBoard({
-    name: '🧩 Cards',
+    name: 'Cards',
     Board: () => <Cards />,
     environmentProps: {
         canvasWidth: 874,
+        windowWidth: 1090,
     },
 });

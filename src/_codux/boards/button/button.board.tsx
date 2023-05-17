@@ -6,7 +6,7 @@ import { DocSection } from '../../../util-components/documentation/doc-section';
 import styles from './button.board.module.scss';
 
 export default createBoard({
-    name: '📒 Button',
+    name: 'Button',
     Board: () => {
         return (
             <Doc>

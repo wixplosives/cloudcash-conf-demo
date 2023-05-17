@@ -3,7 +3,7 @@ import { DashboardLayout } from '../../../components/dashboard-layout/dashboard-
 import styles from './dashboard-layout.board.module.scss';
 
 export default createBoard({
-    name: '🧩 Dashboard Layout',
+    name: 'Dashboard Layout',
     Board: () => (
         <DashboardLayout>
             <div className={styles.root}>Page Content</div>

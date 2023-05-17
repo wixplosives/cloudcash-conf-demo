@@ -3,7 +3,7 @@ import { GetLoanBanner } from '../../../components/get-loan-banner/get-loan-bann
 import styles from './get-loan-banner.board.module.scss';
 
 export default createBoard({
-    name: '🧩 Get Loan Banner',
+    name: 'Get Loan Banner',
     Board: () => (
         <div className={styles.root}>
             <GetLoanBanner />

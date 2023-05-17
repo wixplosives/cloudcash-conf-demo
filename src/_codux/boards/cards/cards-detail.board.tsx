@@ -5,7 +5,7 @@ import { DocHeader } from '../../../util-components/documentation/doc-header';
 import { DocSection } from '../../../util-components/documentation/doc-section';
 
 export default createBoard({
-    name: '📒 Cards Detail',
+    name: 'Cards Detail',
     Board: () => (
         <Doc>
             <DocHeader title="Cards Detail" />
