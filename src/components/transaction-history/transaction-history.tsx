@@ -8,7 +8,7 @@ const transactions = [
         type: 'shopping',
         typeLabel: 'Shopping',
         date: 'Jul 14, 2022',
-        amount: 120375.6,
+        amount: 1275.6,
         currency: 'USD',
     },
     {

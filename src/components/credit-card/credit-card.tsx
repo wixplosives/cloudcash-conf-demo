@@ -1,24 +1,30 @@
 import classNames from 'classnames';
 import styles from './credit-card.module.scss';
 
-interface CreditCardProps {
-    className?: string;
-    logo?: string;
+export interface CCInfo {
     cardNumberStartsWith: string;
     cardNumberEndsWith: string;
     cardHolderName: string;
     expireDateMonth: string;
     expireDateYear: string;
+    logo?: string;
+}
+
+export interface CreditCardProps {
+    ccInfo: CCInfo;
+    className?: string;
 }
 
 export const CreditCard = ({
+    ccInfo: {
+        cardNumberStartsWith,
+        cardNumberEndsWith,
+        cardHolderName,
+        expireDateMonth,
+        expireDateYear,
+        logo,
+    },
     className,
-    logo,
-    cardNumberStartsWith,
-    cardNumberEndsWith,
-    cardHolderName,
-    expireDateMonth,
-    expireDateYear,
 }: CreditCardProps) => {
     return (
         <div className={classNames(styles.root, className)}>

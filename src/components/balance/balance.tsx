@@ -2,10 +2,14 @@ import styles from './balance.module.scss';
 import classNames from 'classnames';
 import { CardsDetail } from '../cards/cards-detail/cards-detail';
 
-export interface BalanceProps {
+export interface Finances {
     balanceSum?: number;
     incomeSum?: number;
     outcomeSum?: number;
+}
+
+export interface BalanceProps {
+    finances: Finances;
     className?: string;
 }
 
@@ -14,9 +18,7 @@ export interface BalanceProps {
  * For details on on how to create custom new component templates, see https://help.codux.com/kb/en/article/configuration-for-balances-and-templates
  */
 export const Balance = ({
-    balanceSum = 0,
-    incomeSum = 0,
-    outcomeSum = 0,
+    finances: { balanceSum = 0, incomeSum = 0, outcomeSum = 0 },
     className,
 }: BalanceProps) => {
     return (
@@ -36,7 +38,7 @@ export const Balance = ({
             <CardsDetail
                 amount={outcomeSum}
                 currency="$"
-                label="Outcome"
+                label="Expenses"
                 trend="negative"
             />
         </div>

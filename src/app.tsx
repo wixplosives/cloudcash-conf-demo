@@ -6,8 +6,8 @@ import { TransactionHistory } from './components/transaction-history/transaction
 import PageHeader from './components/page-header/page-header';
 import { NewTransaction } from './components/new-transaction/new-transaction';
 import { GetLoanBanner } from './components/get-loan-banner/get-loan-banner';
-import { Balance } from './components/balance/balance';
 import styles from './app.module.scss';
+import { Balance } from './components/balance/balance';
 
 function App() {
     return (
@@ -28,7 +28,13 @@ function App() {
                 <Section>
                     <Section.Content className={styles.dashboardGrid}>
                         <div className={styles.mainColumn}>
-                            <Balance />
+                            <Balance
+                                finances={{
+                                    balanceSum: 1425,
+                                    incomeSum: 627,
+                                    outcomeSum: 321,
+                                }}
+                            />
                         </div>
                         <div className={styles.mainColumn}>
                             <TransactionHistory />
