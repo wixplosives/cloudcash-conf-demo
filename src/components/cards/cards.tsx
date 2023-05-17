@@ -1,6 +1,6 @@
 import Card from '../card/card';
 import { CardsDetail } from './cards-detail/cards-detail';
-import { CreditCardSvg } from '../credit-card-svg/credit-card-svg';
+import { CreditCard } from '../credit-card/credit-card';
 import styles from './cards.module.scss';
 
 interface CardsProps {
@@ -13,14 +13,16 @@ export const Cards = ({ className }: CardsProps) => {
             <Card.Title>Cards</Card.Title>
             <Card.Content className={styles.content}>
                 <div className={styles.creditCardSection}>
-                    <CreditCardSvg
+                    <CreditCard
                         className={styles.creditCard}
-                        logo="Cloudcash"
-                        cardNumberStartsWith="5789"
-                        cardNumberEndsWith="2847"
-                        cardHolderName="Mike Smith"
-                        expireDateMonth="06"
-                        expireDateYear="22"
+                        ccInfo={{
+                            logo: 'Cloudcash',
+                            cardNumberStartsWith: '5789',
+                            cardNumberEndsWith: '2847',
+                            cardHolderName: 'Mike Smith',
+                            expireDateMonth: '06',
+                            expireDateYear: '22',
+                        }}
                     />
                 </div>
 
