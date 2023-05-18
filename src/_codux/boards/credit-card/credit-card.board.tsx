@@ -7,12 +7,14 @@ export default createBoard({
     Board: () => (
         <div className={styles.root}>
             <CreditCard
-                logo="Cloudcash"
-                cardNumberStartsWith="5789"
-                cardNumberEndsWith="2847"
-                cardHolderName="Mike Smith"
-                expireDateMonth="06"
-                expireDateYear="22"
+                ccInfo={{
+                    logo: "Fantasy Co.",
+                    cardNumberStartsWith: "5789",
+                    cardNumberEndsWith: "2847",
+                    cardHolderName: "Mike Smith",
+                    expireDateMonth: "06",
+                    expireDateYear: "22",
+                }}
             />
         </div>
     ),
