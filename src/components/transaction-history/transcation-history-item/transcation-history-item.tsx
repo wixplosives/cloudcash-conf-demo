@@ -2,7 +2,7 @@ import { LiHTMLAttributes } from 'react';
 import { Icon, Glyph } from '../../icon/icon';
 import styles from './transaction-history-item.module.scss';
 
-interface TransactionHistoryItemProps extends LiHTMLAttributes<HTMLLIElement> {
+export interface TransactionHistoryItemProps extends LiHTMLAttributes<HTMLLIElement> {
     receiver: string;
     type: string;
     typeLabel: string;

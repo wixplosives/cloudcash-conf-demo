@@ -7,9 +7,18 @@ import { PageHeader } from './components/page-header/page-header';
 import { NewTransaction } from './components/new-transaction/new-transaction';
 import { GetLoanBanner } from './components/get-loan-banner/get-loan-banner';
 import styles from './app.module.scss';
-import { Balance } from './components/balance/balance';
+import { Balance, Finances } from './components/balance/balance';
+import { TransactionHistoryItemProps } from './components/transaction-history/transcation-history-item/transcation-history-item';
+import { CCInfo } from './components/credit-card/credit-card';
+import { userInfo } from './_codux/boards/app/user-mocks';
 
-function App() {
+interface UserInfo {
+    transactions: TransactionHistoryItemProps[];
+    ccInfo: CCInfo;
+    finances: Finances;
+}
+
+function App({userInfo}: {userInfo:UserInfo}) {
     return (
         <div className={styles.root}>
             <DashboardLayout>
@@ -37,7 +46,7 @@ function App() {
                             />
                         </div>
                         <div className={styles.mainColumn}>
-                            <TransactionHistory />
+                            <TransactionHistory transactions={userInfo.transactions}/>
                         </div>
                         <div className={styles.secondaryColumn}>
                             <Goals />
