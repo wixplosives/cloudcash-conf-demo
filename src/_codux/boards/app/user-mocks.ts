@@ -1,7 +1,7 @@
 const finances = {
     balanceSum: 56263,
-    incomeSum: 3463,
-    outcomeSum: 734,
+    income: 3463,
+    expenses: 734,
 };
 
 const transactions = [
