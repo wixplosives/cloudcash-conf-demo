@@ -7,10 +7,11 @@ import { PageHeader } from './components/page-header/page-header';
 import { NewTransaction } from './components/new-transaction/new-transaction';
 import { GetLoanBanner } from './components/get-loan-banner/get-loan-banner';
 import styles from './app.module.scss';
-import { Balance, Finances } from './components/balance/balance';
+import { Finances } from './components/balance/balance';
 import { TransactionHistoryItemProps } from './components/transaction-history/transcation-history-item/transcation-history-item';
 import { CCInfo } from './components/credit-card/credit-card';
 import { userInfo } from './_codux/boards/app/user-mocks';
+import { CardBalance } from './components/card-balance/card-balance';
 
 interface UserInfo {
     transactions: TransactionHistoryItemProps[];
@@ -18,7 +19,7 @@ interface UserInfo {
     finances: Finances;
 }
 
-function App({userInfo}: {userInfo:UserInfo}) {
+function App({ userInfo }: { userInfo: UserInfo }) {
     return (
         <div className={styles.root}>
             <DashboardLayout>
@@ -37,16 +38,12 @@ function App({userInfo}: {userInfo:UserInfo}) {
                 <Section>
                     <Section.Content className={styles.dashboardGrid}>
                         <div className={styles.mainColumn}>
-                            <Balance
-                                finances={{
-                                    balanceSum: 56263,
-                                    income: 3463,
-                                    expenses: 734,
-                                }}
-                            />
+                            <CardBalance ccinfo={userInfo.ccInfo} finances={userInfo.finances}/>
                         </div>
                         <div className={styles.mainColumn}>
-                            <TransactionHistory transactions={userInfo.transactions}/>
+                            <TransactionHistory
+                                transactions={userInfo.transactions}
+                            />
                         </div>
                         <div className={styles.secondaryColumn}>
                             <Goals />

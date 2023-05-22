@@ -21,12 +21,17 @@
     padding: $spacing-2-5;
     border-radius: $radius-xxx-large;
     background-color: #197bbd;
-    background-image: url('https://static.wixstatic.com/shapes/610b66_69366bd4c21f42efb891bb01a462296b.svg'),
+    background-image: url(https://static.wixstatic.com/media/d9657b20f1b9473f90815b9da211bb2a.jpg/v1/fit/w_924,h_520/d9657b20f1b9473f90815b9da211bb2a.jpg),
         linear-gradient(#197bbd, #3391d0); // cloud.svg (320x206)
     background-size: cover;
     color: $color-white;
     box-shadow: 0 8px 12px -8px rgb(64 64 64 / 50%),
         0 2px 4px -2px rgb(64 64 64 / 10%);
+    background-position: 53% 48%;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-origin: padding-box;
+    background-clip: border-box;
 }
 
 .cardLogo {
