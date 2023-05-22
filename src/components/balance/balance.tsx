@@ -4,8 +4,8 @@ import { CardsDetail } from '../cards/cards-detail/cards-detail';
 
 export interface Finances {
     balanceSum?: number;
-    incomeSum?: number;
-    outcomeSum?: number;
+    income?: number;
+    expenses?: number;
 }
 
 export interface BalanceProps {
@@ -14,7 +14,7 @@ export interface BalanceProps {
 }
 
 export const Balance = ({
-    finances: { balanceSum = 0, incomeSum = 0, outcomeSum = 0 },
+    finances: { balanceSum = 0, income = 0, expenses = 0 },
     className,
 }: BalanceProps) => {
     return (
@@ -26,13 +26,13 @@ export const Balance = ({
                 emphasized={true}
             />
             <CardsDetail
-                amount={incomeSum}
+                amount={income}
                 currency="$"
                 label="Income"
                 trend="positive"
             />
             <CardsDetail
-                amount={outcomeSum}
+                amount={expenses}
                 currency="$"
                 label="Expenses"
                 trend="negative"

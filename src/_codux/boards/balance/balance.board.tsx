@@ -5,7 +5,7 @@ export default createBoard({
     name: 'Balance',
     Board: () => (
         <Balance
-            finances={{ balanceSum: 12000, incomeSum: 3400, outcomeSum: 420 }}
+            finances={{ balanceSum: 12000, income: 3400, expenses: 420 }}
         />
     ),
     environmentProps: {
