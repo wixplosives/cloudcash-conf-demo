@@ -12,13 +12,7 @@ import { TransactionHistoryItemProps } from './components/transaction-history/tr
 import { CCInfo } from './components/credit-card/credit-card';
 import { userInfo } from './_codux/boards/app/user-mocks';
 
-interface UserInfo {
-    transactions: TransactionHistoryItemProps[];
-    ccInfo: CCInfo;
-    finances: Finances;
-}
-
-function App({userInfo}: {userInfo:UserInfo}) {
+function App() {
     return (
         <div className={styles.root}>
             <DashboardLayout>
@@ -46,7 +40,9 @@ function App({userInfo}: {userInfo:UserInfo}) {
                             />
                         </div>
                         <div className={styles.mainColumn}>
-                            <TransactionHistory transactions={userInfo.transactions}/>
+                            <TransactionHistory
+                                transactions={userInfo.transactions}
+                            />
                         </div>
                         <div className={styles.secondaryColumn}>
                             <Goals />
